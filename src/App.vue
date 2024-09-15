@@ -1,12 +1,13 @@
 <script setup>
 import UserList from './components/UserList.vue';
 import UserForm from './components/UserForm.vue';
+import { RouterView } from 'vue-router';
 </script>
 
 <template>
   <div id="app">
     <h1>Gestión de usuarios</h1>
-    <UserList />
+    <router-view></router-view>
   </div>
 </template>
 

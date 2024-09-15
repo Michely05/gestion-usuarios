@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import UserList from "./components/UserList.vue";
+import UserForm from "./components/UserForm.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,14 +13,9 @@ const router = createRouter({
     {
         path: "/new-user",
         name: "new-user",
-        component: () => import("./components/UserForm.vue")
+        component: UserForm
     }
 ]
 })
-
-// const router = createRouter({
-//     history: createWebHistory(),
-//     routes
-// });
 
 export default router;
