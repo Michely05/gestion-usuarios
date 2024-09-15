@@ -33,8 +33,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
-    <button @click="navigateToForm">Añadir usuario</button>
+  <div class="userList-content">
+    <div class="btn-container">
+      <button class="add-user-btn" @click="navigateToForm">Añadir usuario</button>
+    </div>
     <table v-if="users.length">
         <thead>
             <tr>
@@ -51,3 +53,51 @@ onMounted(() => {
     </table>
   </div>
 </template>
+
+<style scoped>
+
+.btn-container{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.add-user-btn {
+  background-color: #00c2ff;
+  color: #ffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-user-btn:hover {
+  background-color: #4199be;
+}
+
+table {
+  width: 100%;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  border: 2px solid #ddd;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  th {
+  padding: 15px;
+  color: #7a7a7a;
+  text-align: left;
+  font-weight: bold;
+}
+
+td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+}
+
+</style>
