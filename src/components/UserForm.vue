@@ -20,6 +20,7 @@ const handleSubmit = async () => {
 };
 </script>
 
+
 <template>
     <div class="userForm-container">
         <form @submit.prevent="handleSubmit">
@@ -37,8 +38,8 @@ const handleSubmit = async () => {
     </div>
 </template>
 
-<style scoped>
 
+<style scoped>
 .userForm-container {
   max-width: 500px;
   margin: 5rem auto;
@@ -100,5 +101,4 @@ h2 {
 .submit-btn:hover {
   background-color: #4199be;
 }
-
 </style>

@@ -29,8 +29,8 @@ const navigateToForm = () => {
 onMounted(() => {
   fetchUsers();
 });
-
 </script>
+
 
 <template>
   <div class="userList-content">
@@ -54,8 +54,8 @@ onMounted(() => {
   </div>
 </template>
 
-<style scoped>
 
+<style scoped>
 .userList-content {
   margin: 5rem auto;
 }
@@ -103,5 +103,4 @@ td {
   border-top: 1px solid #ddd;
 }
 }
-
 </style>
