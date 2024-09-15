@@ -6,7 +6,7 @@ import UserForm from './components/UserForm.vue';
 <template>
   <div id="app">
     <h1>Gestión de usuarios</h1>
-    <UserForm />
+    <UserList />
   </div>
 </template>
 

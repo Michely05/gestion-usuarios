@@ -56,6 +56,10 @@ onMounted(() => {
 
 <style scoped>
 
+.userList-content {
+  margin: 5rem auto;
+}
+
 .btn-container{
   display: flex;
   justify-content: flex-end;
