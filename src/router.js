@@ -11,8 +11,8 @@ const router = createRouter({
         component: UserList
     },
     {
-        path: '/new-user',
-        name: 'new-user',
+        path: '/user',
+        name: 'user',
         component: UserForm
     }
 ]

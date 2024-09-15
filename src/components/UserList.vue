@@ -23,7 +23,7 @@ const calcularEdad = (birthdate) => {
 };
 
 const navigateToForm = () => {
-  router.push('/new-user');
+  router.push('/user');
 };
 
 onMounted(() => {
