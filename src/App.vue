@@ -6,8 +6,7 @@ import { RouterView } from 'vue-router';
 
 <template>
   <div id="app">
-    <h1>Gestión de usuarios</h1>
-    <router-view></router-view>
+    <RouterView></RouterView>
   </div>
 </template>
 
