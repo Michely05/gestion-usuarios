@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import axios from 'axios';
 
 const router = useRouter();
 const user = ref({
@@ -10,9 +9,14 @@ const user = ref({
   birthday: ''
 });
 
-const handleSubmit = async () => {
+const handleSubmit = () => {
   try {
-    await axios.post('/users.json', user.value);
+    const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+
+    storedUsers.push(user.value);
+
+    localStorage.setItem('users', JSON.stringify(storedUsers));
+
     router.push('/');
   } catch (error) {
     console.error('Error al crear el usuario:', error);
