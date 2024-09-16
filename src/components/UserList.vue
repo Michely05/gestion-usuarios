@@ -19,7 +19,7 @@ const fetchUsers = async () => {
   }
 };
 
-const calcularEdad = (birthdate) => {
+const getAge = (birthdate) => {
   const birthDate = new Date(birthdate);
   const diff = Date.now() - birthDate.getTime();
   const age = new Date(diff).getUTCFullYear() - 1970;
@@ -51,7 +51,7 @@ onMounted(() => {
         <tbody>
             <tr v-for="user in users" :key="user.name">
                 <td>{{ user.name }} {{ user.surname }}</td>
-                <td> {{ calcularEdad(user.birthday) }}</td>
+                <td> {{ getAge(user.birthday) }}</td>
             </tr>
         </tbody>
     </table>
