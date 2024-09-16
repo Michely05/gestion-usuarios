@@ -20,6 +20,7 @@ const handleSubmit = async () => {
 };
 </script>
 
+
 <template>
     <div class="userForm-container">
         <form @submit.prevent="handleSubmit">
@@ -29,7 +30,7 @@ const handleSubmit = async () => {
             <label for="surname">Apellido:</label>
             <input type="text" v-model="user.surname" required />
             <label for="birthdate">Fecha de Nacimiento:</label>
-            <input type="date" v-model="user.birthdate" required />
+            <input type="date" v-model="user.birthday" required />
             <div class="btn-container">
               <button class="submit-btn" type="submit">Guardar</button>
           </div>
@@ -37,8 +38,8 @@ const handleSubmit = async () => {
     </div>
 </template>
 
-<style scoped>
 
+<style scoped>
 .userForm-container {
   max-width: 500px;
   margin: 5rem auto;
@@ -100,5 +101,4 @@ h2 {
 .submit-btn:hover {
   background-color: #4199be;
 }
-
 </style>
