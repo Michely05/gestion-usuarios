@@ -1,11 +1,10 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
-import { useRouter, useRoute } from 'vue-router';
+import { useRouter } from 'vue-router';
 
 const users = ref([]);
 const router = useRouter();
-const route = useRoute();
 
 const fetchUsers = async () => {
   try {
@@ -30,13 +29,6 @@ const calcularEdad = (birthdate) => {
 const navigateToForm = () => {
   router.push('/user');
 };
-
-watch(
-  () => route.path,
-  () => {
-    fetchUsers();
-  }
-);
 
 onMounted(() => {
   fetchUsers();
