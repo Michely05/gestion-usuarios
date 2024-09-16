@@ -9,7 +9,11 @@ const router = useRouter();
 const fetchUsers = async () => {
   try {
     const response = await axios.get('/users.json');
-    users.value = response.data.users;
+    const defaultUsers = response.data.users;
+
+    const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+
+    users.value = [...defaultUsers, ...storedUsers];
   } catch (error) {
     console.error('Error al obtener los usuarios:', error);
   }
