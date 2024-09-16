@@ -30,7 +30,7 @@ const handleSubmit = async () => {
             <label for="surname">Apellido:</label>
             <input type="text" v-model="user.surname" required />
             <label for="birthdate">Fecha de Nacimiento:</label>
-            <input type="date" v-model="user.birthdate" required />
+            <input type="date" v-model="user.birthday" required />
             <div class="btn-container">
               <button class="submit-btn" type="submit">Guardar</button>
           </div>
